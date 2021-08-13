@@ -10,16 +10,20 @@
         <link rel="stylesheet" href="css/styles.css">
 
         <!-- js -->
-        <script src="/js/main.js" defer="defer"></script>
+        <script src="js/main.js" defer="defer"></script>
 
         <!-- icons -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer="defer"></script>
-        <script nomodule="nomodule" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer="defer"></script>
-        
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+            defer="defer"></script>
+        <script
+            nomodule="nomodule"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+            defer="defer"></script>
+<!-- ANIMATION -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
-                
     </head>
     <body>
         <header class="l-header">
@@ -94,6 +98,43 @@
             </div>
         </main>
 
+        <script>
+            //GSAP
 
+            /*------- ANIMATION -------*/
+
+            /*TITLE Y IMG*/
+            gsap.from('.home_title', {
+                opacity: -1,
+                duration: 1.5,
+                delay: 1
+            });
+            gsap.from('.home__img', {
+                opacity: 0,
+                duration: 1,
+                delay: 1,
+                x: 100
+            });
+            gsap.from('.home__information', {
+                opacity: 0,
+                duration: 1,
+                delay: 1.2,
+                y: -30
+            });
+
+            /*BOX*/
+            gsap.from('.box__medium', {
+                opacity: 0,
+                duration: 1.5,
+                delay: 1.3,
+                y: -50
+            });
+            gsap.from('.box__small', {
+                opacity: -1,
+                duration: 1.5,
+                delay: 1.4,
+                y: -50
+            });
+        </script>
     </body>
 </html>
